@@ -50,11 +50,11 @@ const App = () => {
   }
 
   return <div className="all-movies">
-    <form onSubmit={submitForm}>
-      <input type="text" onChange={ (event) => setMoviesTitle(event.target.value)} placeholder="Title" value={moviesTitle}/><br />
-      <input type="number" onChange={ (event) => setMoviesMinage(event.target.value)} placeholder="Minage" min="0" value={moviesMinage}/><br />
-      <input type="number" onChange={ (event) => setMoviesTime(event.target.value)} placeholder="Time" min="0" value={moviesTime} /><br />
-      <button type="submit" value="Add">Add</button>
+    <form onSubmit={submitForm} className="form">
+      <input type="text" className="input" onChange={ (event) => setMoviesTitle(event.target.value)} placeholder="Title" value={moviesTitle}/>
+      <input type="number" className="input"  onChange={ (event) => setMoviesMinage(event.target.value)} placeholder="Minage" min="0" value={moviesMinage}/>
+      <input type="number" className="input" onChange={ (event) => setMoviesTime(event.target.value)} placeholder="Time" min="0" value={moviesTime} />
+      <input type="submit" value="Add" />
     </form>
 
     {error && <p>{error}</p>}
